@@ -658,6 +658,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6837/proprietary/vendor/etc/ecc_list_OP20.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP20.xml \
     vendor/infinix/X6837/proprietary/vendor/etc/ecc_list_OP236.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP236.xml \
     vendor/infinix/X6837/proprietary/vendor/etc/ecc_list_preference.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_preference.xml \
+    vendor/infinix/X6837/proprietary/vendor/etc/ecc_list_tran2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_tran2.xml \
     vendor/infinix/X6837/proprietary/vendor/etc/ft8725_fhdp_dsi_vdo_lce_inx_120hz_x6837_cust_color.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ft8725_fhdp_dsi_vdo_lce_inx_120hz_x6837_cust_color.xml \
     vendor/infinix/X6837/proprietary/vendor/etc/ft8725_fhdp_dsi_vdo_txd_inx_120hz_x6837_cust_color.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ft8725_fhdp_dsi_vdo_txd_inx_120hz_x6837_cust_color.xml \
     vendor/infinix/X6837/proprietary/vendor/etc/gnss/agps_profiles_conf2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/agps_profiles_conf2.xml \
@@ -866,7 +867,6 @@ PRODUCT_PACKAGES += \
     libTransNS \
     libaedv \
     libbwc \
-    libccci_util \
     libgz_gp_client \
     libgz_uree \
     libhevce_sb.ca7.android \
@@ -876,16 +876,13 @@ PRODUCT_PACKAGES += \
     libipsec_ims_shr \
     libkaraoke \
     libladder \
-    libmtkcutils \
-    libmtkproperty \
-    libmtkrillog \
     libvcodec_oal \
     libvcodecdrv_header_stub \
     libverno \
     libwo \
     arm.graphics-V1-ndk_platform \
     libmtk_drvb \
-    vendor.mediatek.hardware.videotelephony@1.0 \
+    vendor.mediatek.hardware.videotelephony@1.0_vendor \
     libHEVCdec_sa.ca7.android \
     libh264dec_customize \
     libh264dec_sa.ca7 \
@@ -1217,6 +1214,7 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libcares_naptr \
     libcarrierconfig \
+    libccci_util \
     libcmdl \
     libcmdl_ndk.mtk.vndk \
     libcodec2_mtk_c2store \
@@ -1273,12 +1271,15 @@ PRODUCT_PACKAGES += \
     libmtkcam_pipelinepolicy-aov \
     libmtkconfig \
     libmtkconfigutils \
+    libmtkcutils \
     libmtkhardware_legacy \
     libmtkisp_metadata \
     libmtklimiter_vendor \
     libmtkmipc-ril \
     libmtknetcap \
     libmtknetutils \
+    libmtkproperty \
+    libmtkrillog \
     libmtkrilutils \
     libmtkshifter_vendor \
     libmtksysutils \
