@@ -174,7 +174,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libhidlbase",
                 "libfmq",
-                "vendor.mediatek.hardware.videotelephony@1.0_vendor",
+                "vendor.mediatek.hardware.videotelephony@1.0",
                 "libc",
                 "libutils",
                 "libcutils",
@@ -192,7 +192,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libhidlbase",
                 "libfmq",
-                "vendor.mediatek.hardware.videotelephony@1.0_vendor",
+                "vendor.mediatek.hardware.videotelephony@1.0",
                 "libc",
                 "libutils",
                 "libcutils",
@@ -968,8 +968,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.mediatek.hardware.videotelephony@1.0_vendor",
-    stem: "vendor.mediatek.hardware.videotelephony@1.0",
+    name: "vendor.mediatek.hardware.videotelephony@1.0",
     owner: "infinix",
     strip: {
         none: true,
@@ -26458,7 +26457,7 @@ cc_prebuilt_binary {
                 "liblog",
                 "libbase",
                 "libfmq",
-                "vendor.mediatek.hardware.videotelephony@1.0_vendor",
+                "vendor.mediatek.hardware.videotelephony@1.0",
                 "libhardware",
                 "libhwbinder",
                 "libhidlbase",
