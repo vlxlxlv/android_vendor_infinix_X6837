@@ -6,6 +6,7 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/infinix/X6837
 
 PRODUCT_COPY_FILES += \
+    vendor/infinix/X6837/proprietary/system/etc/init/kpoc_charger.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/kpoc_charger.rc \
     vendor/infinix/X6837/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.drbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.drbin \
     vendor/infinix/X6837/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.tlbin \
     vendor/infinix/X6837/proprietary/vendor/app/mcRegistry/031c0000000000000000000000000000.drbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/031c0000000000000000000000000000.drbin \
@@ -647,7 +648,6 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6837/proprietary/vendor/etc/audio_param/Volume_AudioParam.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/Volume_AudioParam.xml \
     vendor/infinix/X6837/proprietary/vendor/etc/audio_param/Volume_ParamUnitDesc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/Volume_ParamUnitDesc.xml \
     vendor/infinix/X6837/proprietary/vendor/etc/cam3atms_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cam3atms_profiles.xml \
-    vendor/infinix/X6837/proprietary/vendor/etc/dar_thermal_core/thermal_core_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/dar_thermal_core/thermal_core_config.json \
     vendor/infinix/X6837/proprietary/vendor/etc/ecc_list.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list.xml \
     vendor/infinix/X6837/proprietary/vendor/etc/ecc_list_OP01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP01.xml \
     vendor/infinix/X6837/proprietary/vendor/etc/ecc_list_OP02.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP02.xml \
@@ -730,7 +730,6 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6837/proprietary/vendor/etc/mali_platform.config:$(TARGET_COPY_OUT_VENDOR)/etc/mali_platform.config \
     vendor/infinix/X6837/proprietary/vendor/etc/mtk_platform_codecs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mtk_platform_codecs_config.xml \
     vendor/infinix/X6837/proprietary/vendor/etc/nnapi_powerhal.json:$(TARGET_COPY_OUT_VENDOR)/etc/nnapi_powerhal.json \
-    vendor/infinix/X6837/proprietary/vendor/etc/predthermallevel_rf.json:$(TARGET_COPY_OUT_VENDOR)/etc/predthermallevel_rf.json \
     vendor/infinix/X6837/proprietary/vendor/etc/slp_conf:$(TARGET_COPY_OUT_VENDOR)/etc/slp_conf \
     vendor/infinix/X6837/proprietary/vendor/etc/special_pws_channel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/special_pws_channel.xml \
     vendor/infinix/X6837/proprietary/vendor/etc/thermal/disable_skin_control.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/disable_skin_control.conf \
@@ -857,6 +856,7 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/X6837/proprietary/vendor/lib/egl/egl.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/egl/egl.cfg
 
 PRODUCT_PACKAGES += \
+    libshowlogo \
     AVCSecureVdecCA_510 \
     HEVCSecureVdecCA_510 \
     VP9SecureVdecCA_510 \
@@ -1730,6 +1730,7 @@ PRODUCT_PACKAGES += \
     manifest_chipone.xml \
     manifest_hwcomposer.xml \
     vendor.transsion.hardware.trancam.trancamserver@1.0.xml \
+    kpoc_charger \
     ccci_mdinit \
     ccci_rpcd \
     fuelgauged \
@@ -1763,7 +1764,6 @@ PRODUCT_PACKAGES += \
     nvram_daemon \
     rcs_volte_stack \
     thermal_core \
-    thermal_intf \
     volte_clientapi_ua \
     volte_imcb \
     volte_imsm_93 \

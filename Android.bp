@@ -11,6 +11,39 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+    name: "libshowlogo",
+    owner: "infinix",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system/lib64/libshowlogo.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "libc",
+                "libstdc++",
+                "libz",
+                "libdrm",
+                "liblog",
+                "libgui",
+                "libui",
+                "libbase",
+                "libSurfaceFlingerProp",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
     name: "AVCSecureVdecCA_510",
     owner: "infinix",
     strip: {
@@ -25734,6 +25767,46 @@ prebuilt_etc_xml {
 }
 
 cc_prebuilt_binary {
+    name: "kpoc_charger",
+    owner: "infinix",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system/bin/kpoc_charger",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "libstdc++",
+                "libz",
+                "liblog",
+                "libui",
+                "libdrm",
+                "libhardware_legacy",
+                "libsuspend",
+                "android.hardware.health@2.0",
+                "android.hardware.health-V1-ndk",
+                "libbase",
+                "libbinder",
+                "libbinder_ndk",
+                "libhidlbase",
+                "libhidltransport",
+                "libshowlogo",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+}
+
+cc_prebuilt_binary {
     name: "ccci_mdinit",
     owner: "infinix",
     target: {
@@ -26795,30 +26868,6 @@ cc_prebuilt_binary {
                 "libifcutils_mtk",
                 "libmipc",
                 "libmtkproperty",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "thermal_intf",
-    owner: "infinix",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/thermal_intf",
-            ],
-            shared_libs: [
                 "libc++",
                 "libc",
                 "libm",
